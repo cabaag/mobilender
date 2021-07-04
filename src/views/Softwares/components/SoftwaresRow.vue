@@ -1,9 +1,12 @@
 <template>
   <DataTableRow>
-    <DataTableData style="width: 25rem">
+    <DataTableData style="width: 25rem;">
       <div class="software-data">
         <CounterSquare>
-          {{ index }}
+          <span v-if="index < 10">0{{ index }}</span>
+          <span v-else>
+            {{ index }}
+          </span>
         </CounterSquare>
         <h3 class="software-name">
           {{ software.name }}
@@ -14,15 +17,15 @@
       {{ software.type }}
     </DataTableData>
     <DataTableData class="chevron-data">
-      <i class="fas fa-chevron-right" style="color:grey"></i>
+      <i class="fas fa-chevron-right" style="color: grey;"></i>
     </DataTableData>
   </DataTableRow>
 </template>
 
 <script>
-import CounterSquare from "@/components/CounterSquare.vue";
-import DataTableData from "@/components/DataTable/DataTableData.vue";
-import DataTableRow from "@/components/DataTable/DataTableRow.vue";
+import CounterSquare from '@/components/CounterSquare.vue'
+import DataTableData from '@/components/DataTable/DataTableData.vue'
+import DataTableRow from '@/components/DataTable/DataTableRow.vue'
 export default {
   props: {
     software: {
@@ -35,10 +38,7 @@ export default {
     },
   },
   components: { DataTableRow, DataTableData, CounterSquare },
-  setup() {
-    return {};
-  },
-};
+}
 </script>
 
 <style lang="css" scoped>

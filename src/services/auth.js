@@ -1,4 +1,4 @@
-import axiosClient from ".";
+import axiosClient from "./index";
 
 export const login = (email, password) => {
   if (email && password) {

@@ -19,6 +19,5 @@ export default {
 <style lang="css" scoped>
 .home-container {
   display: flex;
-  /* justify-content: center; */
 }
 </style>

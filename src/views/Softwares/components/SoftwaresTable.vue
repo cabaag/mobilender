@@ -1,42 +1,29 @@
 <template>
   <data-table>
     <tbody>
-      <softwares-table-row
+      <SoftwaresRow
         v-for="(software, index) in softwares"
         :key="index"
         :software="software"
-        :index="index"
+        :index="index + 1"
       />
     </tbody>
   </data-table>
 </template>
 
 <script>
-import DataTable from "@/components/DataTable/DataTable.vue";
-import axiosClient from "@/axiosClient";
-import softwaresMock from "@/mocks/softwares.json";
-import SoftwaresTableRow from "./SoftwaresTableRow.vue";
+import DataTable from '@/components/DataTable/DataTable.vue'
+import SoftwaresRow from './SoftwaresRow.vue'
+import { getSoftwares } from '@/services/softwares'
 
 export default {
-  components: { DataTable, SoftwaresTableRow },
+  components: { DataTable, SoftwaresRow },
   async setup() {
-    const softwares = await axiosClient.get("/api/unknown");
-
-    // mocking data
-    const setMockData = new Promise((resolve) => {
-      setTimeout(() => {
-        softwares.data = softwaresMock;
-        resolve(softwares);
-      }, 1000);
-    });
-
-    await setMockData;
+    const softwares = await getSoftwares()
 
     return {
-      softwares: softwares.data,
-    };
+      softwares,
+    }
   },
-};
+}
 </script>
-
-<style , DataTableDatalang="scss" scoped></style>
