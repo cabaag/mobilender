@@ -1,0 +1,34 @@
+[
+  {
+    "archivo": "clientes_credito.xml",
+    "expedicion": "02/08/20",
+    "calidadInformacion": "90%",
+    "estatus": "Finalizado",
+    "finalizacion": "02/08/21",
+    "usuario": "@goytia"
+  },
+  {
+    "archivo": "clientes_crontrato.xml",
+    "expedicion": "12/08/20",
+    "calidadInformacion": "55%",
+    "estatus": "En proceso",
+    "finalizacion": "12/08/21",
+    "usuario": "@goytia"
+  },
+  {
+    "archivo": "clientes_credito.xml",
+    "expedicion": "24/08/20",
+    "calidadInformacion": "87%",
+    "estatus": "Finalizado",
+    "finalizacion": "24/08/21",
+    "usuario": "@goytia"
+  },
+  {
+    "archivo": "clientes_clientes.xml",
+    "expedicion": "30/08/20",
+    "calidadInformacion": "88%",
+    "estatus": "Rechazado",
+    "finalizacion": "30/08/21",
+    "usuario": "@itacapital"
+  }
+]
